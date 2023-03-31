@@ -23,9 +23,7 @@ export const DropDownStyle = createUseStyles({
     borderRadius: "13px",
     transition: "all 0.2s",
     cursor: "pointer",
-    "&:hover": {
-      boxShadow: "0px 0px 1px 2px #B0C0EA90",
-    },
+    boxShadow: "0px 0px 1px 2px #B0C0EA90",
   },
   dropDownMenu: {
     position: "absolute",
@@ -36,7 +34,7 @@ export const DropDownStyle = createUseStyles({
     listStyle: "none",
     padding: " 15px 15px",
     borderRadius: " 20px",
-    marginTop: "10px",
+    marginTop: "5px",
     maxHeight: "250px",
     overflowY: "scroll",
   },

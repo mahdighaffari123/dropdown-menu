@@ -1,62 +1,26 @@
 export const listItems = [
   {
     value: (Math.random() + 1).toString(12),
-    label: "hello",
+    label: "Education",
   },
   {
     value: (Math.random() + 1).toString(12),
-    label: "helloo",
+    label: "Yeeeah, science!",
   },
   {
     value: (Math.random() + 1).toString(12),
-    label: "bye",
+    label: "Art",
   },
   {
     value: (Math.random() + 1).toString(12),
-    label: "byee",
+    label: "Sport",
   },
   {
     value: (Math.random() + 1).toString(12),
-    label: "hi",
+    label: "Games",
   },
   {
     value: (Math.random() + 1).toString(12),
-    label: "hello",
-  },
-  {
-    value: (Math.random() + 1).toString(12),
-    label: "hello",
-  },
-  {
-    value: (Math.random() + 1).toString(12),
-    label: "hello",
-  },
-  {
-    value: (Math.random() + 1).toString(12),
-    label: "hello",
-  },
-  {
-    value: (Math.random() + 1).toString(12),
-    label: "hello",
-  },
-  {
-    value: (Math.random() + 1).toString(12),
-    label: "hello",
-  },
-  {
-    value: (Math.random() + 1).toString(12),
-    label: "hello",
-  },
-  {
-    value: (Math.random() + 1).toString(12),
-    label: "hello",
-  },
-  {
-    value: (Math.random() + 1).toString(12),
-    label: "hello",
-  },
-  {
-    value: (Math.random() + 1).toString(12),
-    label: "hello",
+    label: "Health",
   },
 ];
