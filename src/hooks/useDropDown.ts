@@ -58,7 +58,7 @@ export const useDropDown = (): UseDropDownReturn => {
         setItems((prevState) => [newItem, ...prevState]);
         setSelected(newItem);
       } else {
-        alert("This item already exists in the list.");
+        alert("This item is already exist in the list.");
       }
       event.currentTarget.value = "";
     }
