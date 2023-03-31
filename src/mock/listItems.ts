@@ -1,26 +1,28 @@
+import { generateRandomValue } from "../helpers/generateRandomValue";
+
 export const listItems = [
   {
-    value: (Math.random() + 1).toString(12),
+    value: generateRandomValue(),
     label: "Education",
   },
   {
-    value: (Math.random() + 1).toString(12),
+    value: generateRandomValue(),
     label: "Yeeeah, science!",
   },
   {
-    value: (Math.random() + 1).toString(12),
+    value: generateRandomValue(),
     label: "Art",
   },
   {
-    value: (Math.random() + 1).toString(12),
+    value: generateRandomValue(),
     label: "Sport",
   },
   {
-    value: (Math.random() + 1).toString(12),
+    value: generateRandomValue(),
     label: "Games",
   },
   {
-    value: (Math.random() + 1).toString(12),
+    value: generateRandomValue(),
     label: "Health",
   },
 ];

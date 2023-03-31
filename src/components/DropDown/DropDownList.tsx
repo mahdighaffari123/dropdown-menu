@@ -8,7 +8,7 @@ const DropDownList: React.FC = (): JSX.Element => {
   const { dropDownMenu } = DropDownStyle();
 
   return (
-    <ul className={dropDownMenu}>
+    <ul className={dropDownMenu} onClick={(e) => e.stopPropagation()}>
       <DropDownInput />
       <DropDownItems />
     </ul>

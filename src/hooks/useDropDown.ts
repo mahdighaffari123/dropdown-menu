@@ -1,4 +1,4 @@
-import { useCallback } from "react";
+import { useCallback, useEffect } from "react";
 import { useRecoilState } from "recoil";
 import {
   dropDownExpandStatusAtom,
@@ -6,6 +6,7 @@ import {
   dropDownSelectedItemAtom,
 } from "../core/_atoms";
 import { DropDownItem, UseDropDownReturn } from "../core/_models";
+import { generateRandomValue } from "../helpers/generateRandomValue";
 
 // Define the useDropDown hook
 export const useDropDown = (): UseDropDownReturn => {
@@ -14,6 +15,18 @@ export const useDropDown = (): UseDropDownReturn => {
   const [isExpanded, setIsExpanded] = useRecoilState(dropDownExpandStatusAtom);
   const [selected, setSelected] = useRecoilState(dropDownSelectedItemAtom);
   const [items, setItems] = useRecoilState(dropDownListItemsAtom);
+
+  // Close dropdown While clicking on body
+  useEffect(() => {
+    document.body.addEventListener("click", () => {
+      setIsExpanded(!isExpanded);
+    });
+    return () => {
+      document.body.addEventListener("click", () => {
+        setIsExpanded(!isExpanded);
+      });
+    };
+  }, []);
 
   // Toggle the dropdown expand status
   const handleToggle = useCallback((event: React.MouseEvent) => {
@@ -37,7 +50,7 @@ export const useDropDown = (): UseDropDownReturn => {
   ): void => {
     if (event.key === "Enter" && event.currentTarget.value.length) {
       const newItem = {
-        value: (Math.random() + 1).toString(12),
+        value: generateRandomValue(),
         label: event.currentTarget.value,
       };
       const duplicateItem = items.find((item) => item.label === newItem.label);

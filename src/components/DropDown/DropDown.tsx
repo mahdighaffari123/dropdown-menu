@@ -8,14 +8,12 @@ const DropDown: React.FC = (): JSX.Element => {
   const { dropDownStatus } = useDropDown();
 
   // Get the styles from the DropDownStyle
-  const { root, dropDownWrapper } = DropDownStyle();
+  const { dropDownWrapper } = DropDownStyle();
 
   return (
-    <div className={root}>
-      <div className={dropDownWrapper}>
-        <DropDownToggler />
-        {dropDownStatus && <DropDownList />}
-      </div>
+    <div className={dropDownWrapper}>
+      <DropDownToggler />
+      {dropDownStatus && <DropDownList />}
     </div>
   );
 };
