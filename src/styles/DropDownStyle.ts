@@ -37,7 +37,7 @@ export const DropDownStyle = createUseStyles({
     padding: " 15px 15px",
     borderRadius: " 20px",
     marginTop: "10px",
-    maxHeight: "270px",
+    maxHeight: "250px",
     overflowY: "scroll",
   },
   dropDownItem: {

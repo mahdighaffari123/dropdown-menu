@@ -1,11 +1,16 @@
+import React from "react";
+import { RecoilRoot } from "recoil";
 import DropDown from "./components/DropDown/DropDown";
 
-function App() {
+const App: React.FC = (): JSX.Element => {
   return (
-    <div className="App">
-      <DropDown />
-    </div>
+    // Wrap the App inside RecoilRoot component where states are shared globally
+    <RecoilRoot>
+      <div className="App">
+        <DropDown />
+      </div>
+    </RecoilRoot>
   );
-}
+};
 
 export default App;

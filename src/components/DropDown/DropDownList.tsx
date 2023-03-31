@@ -1,37 +1,18 @@
-import React from "react";
-import { useDropDown } from "./hooks/useDropDown";
-import { DropDownStyle } from "./styles/DropDownStyle";
-import { AiOutlineCheck } from "react-icons/ai";
+import React, { memo } from "react";
+import { DropDownStyle } from "../../styles/DropDownStyle";
+import DropDownInput from "./DropDownInput";
+import DropDownItems from "./DropDownItems";
 
-const DropDownList: React.FC = () => {
-  const { handleSelect, menuRef, handleAddItem, items, selected } =
-    useDropDown();
-  const { dropDownMenu, dropDownItem, dropDownInput, active } = DropDownStyle();
+const DropDownList: React.FC = (): JSX.Element => {
+  // Get the dropDownMenu style from the DropDownStyle
+  const { dropDownMenu } = DropDownStyle();
+
   return (
-    <ul className={dropDownMenu} ref={menuRef}>
-      <input
-        type="text"
-        placeholder="insert new item and hit enter"
-        className={dropDownInput}
-        onKeyUp={handleAddItem}
-      />
-      {items.map((item, index) => {
-        return (
-          <li
-            className={`${dropDownItem} ${
-              item.value === selected?.value ? active : ""
-            }`}
-            onClick={() => handleSelect(item)}
-          >
-            {item.label}
-            {item.value === selected?.value && (
-              <AiOutlineCheck color="rgb(74 102 255)" />
-            )}
-          </li>
-        );
-      })}
+    <ul className={dropDownMenu}>
+      <DropDownInput />
+      <DropDownItems />
     </ul>
   );
 };
 
-export default DropDownList;
+export default memo(DropDownList);
